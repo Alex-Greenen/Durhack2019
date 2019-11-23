@@ -1,0 +1,2 @@
+I'm in the middle of creating a form that connects to google cloud
+Do not open and use the Boostrap or else all the manual programing in the HTML will be overwritten

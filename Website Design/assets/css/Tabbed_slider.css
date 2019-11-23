@@ -1,0 +1,29 @@
+#myCarousel .nav a small {
+  display: block;
+}
+
+#myCarousel .nav {
+  background: #eee;
+}
+
+.nav-justified > li > a {
+  border-radius: 0px;
+}
+
+.nav-pills > li[data-slide-to="0"].active a {
+  background-color: #16a085;
+}
+
+tab-pane {
+}
+
+.tab-item {
+  height: 10vw;
+  font-size: 100%;
+}
+
+.tab-link {
+  height: 100%;
+  padding: 0.3em;
+}
+

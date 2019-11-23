@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <script src="https://apis.google.com/js/client.js"></script>
+    <script type="text/javascript">
+     var PROJECT_ID = 'YOUR_PROJECT_ID';
+     var CLIENT_ID = 'YOUR_CLIENT_ID';
+     var API_KEY = 'YOUR_API_KEY';
+     var SCOPES = 'https://www.googleapis.com/auth/compute';
+     var API_VERSION = 'v1';
+
+     /**
+      * Load the Google Compute Engine API.
+      */
+     function initializeApi() {
+       gapi.client.load('compute', API_VERSION);
+     }
+
+     /**
+      * Authorize Google Compute Engine API.
+      */
+     function authorization() {
+       gapi.client.setApiKey(API_KEY);
+       gapi.auth.authorize({
+         client_id: CLIENT_ID,
+         scope: SCOPES,
+         immediate: false
+       }, function(authResult) {
+            if (authResult && !authResult.error) {
+              initializeApi();
+            } else {
+              window.alert('Auth was not successful');
+            }
+          }
+       );
+     }
+
+     /**
+      * Driver for sample application.
+      */
+     $(window).load(authorization);
+    </script>
+
+    <title>Home - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700&amp;subset=latin-ext">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/Tabbed_slider-1.css">
+    <link rel="stylesheet" href="assets/css/Tabbed_slider.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+</head>
+
+<body id="page-top">
+    <header class="masthead" style="background-image: url(&quot;assets/img/IMG_0416.jpg&quot;);background-repeat: no-repeat;background-position: center;background-size: cover;">
+        <nav class="navbar navbar-light navbar-expand-md navbar navbar-expand-lg fixed-top" id="mainNav" style="align-content: center;">
+            <div class="container"><button data-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fas fa-bars"></i></button>
+                <div
+                    class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="nav navbar-nav text-center">
+                        <li class="nav-item text-center nav-link js-scroll-trigger" role="presentation"><a class="nav-link active active js-scroll-trigger navButton" href="#skills">Features</a></li>
+                        <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link active js-scroll-trigger navButton" href="#about">Description</a></li>
+                    </ul>
+            </div>
+            </div>
+        </nav>
+        <div class="intro-body">
+            <div class="container" style="padding-bottom: 5em;padding-top: 5em;height: 430px;">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto" style="margin-top: 2em;"><img src="assets/img/Untitled_Artwork.jpg" style="border-radius: 50%;width: 30%;max-width: 20em;margin-bottom: 1em;">
+                        <h1 class="text-capitalize brand-heading" style="font-family: Raleway, sans-serif;font-weight: bold;font-size: 85px;">AccessiBank</h1>
+                        <p class="intro-text" style="font-family: Raleway, sans-serif;"></p>
+                        <p class="intro-text" style="font-family: Raleway, sans-serif;">Developing smarter, more accessible solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="skills" class="content-section text-center" style="background-color: #eeeeee;color: rgb(0,0,0);">
+        <div class="container">
+            <div class="row" style="padding-bottom: 3em;">
+                <div class="col-lg-8 mx-auto">
+                    <h2 style="padding-bottom: 0.5em;"><strong>Key Features</strong><br></h2>
+                </div>
+            </div>
+            <div class="skillsDiv">
+                <section class="box"><span class="fa-stack fa-4x" style="padding: 0 0 2.5em 0"><i class="fas fa-circle fa-stack-2x" style="color:#3cadd4"></i><i class="fas fa-file-medical fa-stack-1x fa-inverse"></i></span>
+                    <h4 style="font-family: Raleway, sans-serif;">Anticipating the needs special needs customers</h4>
+                    <p style="font-family: Raleway, sans-serif;">A. Given information about the customer, we can infer the how urgent their situation, how much time should be allocated to their case and how to best contact them.</p>
+                    <p style="font-family: Raleway, sans-serif;">B. We can detect the roots of the complaints of the current system using Natural Language Processing.</p>
+                </section>
+                <section class="box"><span class="fa-stack fa-4x" style="padding: 0 0 2.5em 0"><i class="fas fa-circle fa-stack-2x" style="color:#633cd4"></i><i class="fas fa-code fa-stack-1x fa-inverse"></i></span>
+                    <h4 style="font-family: Raleway, sans-serif;">Cutting-edge Software</h4>
+                    <p style="font-family: Raleway, sans-serif;">Coded in python, html, css and php using TensorFlow for machine Learning, IBM watson for Natural Language Processing and MangoDB for dynamic databasing.</p>
+                </section>
+                <section class="box"><span class="fa-stack fa-4x" style="padding: 0 0 2.5em 0"><i class="fas fa-circle fa-stack-2x" style="color:#d43cad"></i><i class="fas fa-trophy fa-stack-1x fa-inverse"></i></span>
+                    <h4 style="font-family: Raleway, sans-serif;">A working prototype</h4>
+                    <p style="font-family: Raleway, sans-serif;">Our two features work and are programed to be scalable.</p>
+                </section>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="content-section text-center" style="background-color: #eeeeee;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 style="color: #454545;font-weight: bold;font-family: Raleway, sans-serif;font-size: 34px;font-style: normal;">What we have done</h2>
+                    <p style="font-family: Raleway, sans-serif;color: rgb(109,109,109);">1. Create plausible training data by combining an ideal dataset noise based on plausible probability densities</p>
+                    <p style="font-family: Raleway, sans-serif;color: rgb(109,109,109);">2. Create a Machine Learning algorithm using TensorFlow which combines continuous and catigorical data</p>
+                    <p style="font-family: Raleway, sans-serif;color: rgb(109,109,109);">3. Create a Natural Language Processing Algorithm based on customer feedback &nbsp;to infer where efforts should be directed.</p>
+                    <p style="font-family: Raleway, sans-serif;color: rgb(109,109,109);">4. Created website !</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="TestMachine" class="content-section text-center" style="background-color: #eeeeee;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                  <form onsubmit="myFunction()">
+                    <div>
+                      Input1:
+                      <input type="text" id="Input1" name="user_Input1">
+                    </div>
+                    <div>
+                      Input2:
+                      <input type="text" id="Input2" name="user_Input2">
+                    </div>
+                    <div>
+                      Input3:
+                      <input type="text" id="Input3" name="user_Input3">
+                    </div>
+                    <input type="submit">
+                  </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="content-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 style="margin-bottom: 36px;">Check Us Out :)&nbsp;</h2>
+                    <ul class="list-inline banner-social-buttons">
+                        <li class="list-inline-item"><a class="btn-default btn contact-btn" href="https://github.com/Alex-Greenen/Durhack2019"><i class="fab fa-github fa-fw"></i><span class="network-name">&nbsp; GitHub</span></a>&nbsp;</li>
+                        <li class="list-inline-item"><a class="btn-default btn contact-btn" href="https://durhack2019.devpost.com"><i class="fas fa-code-branch fa-fw"></i><span class="network-name">&nbsp; DevPost</span></a>&nbsp;</li>
+                        <li class="list-inline-item">&nbsp;</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container text-center">
+        <p>Copyright © BANANA 2019</p>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="assets/js/grayscale.js"></script>
+    <script src="assets/js/Tabbed_slider.js"></script>
+</body>
+
+</html>
